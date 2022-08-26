@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Advice generator app](https://your-live-site-url.com)
+- Live Demo : [Advice generator app](https://your-live-site-url.com)
 
 ### Built with
 
