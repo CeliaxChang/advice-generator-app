@@ -7,29 +7,31 @@ function App() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const { id, advice } = content;
+
   const fetchData = async () => {
     setLoading(true);
     try {
       const res = await fetch("https://api.adviceslip.com/advice");
       if (!res.ok) {
-        setLoading(false);
         throw new Error("fetch data failed");
       }
-      const { slip } = await res.json();
       setLoading(false);
+      const { slip } = await res.json();
       setContent(slip);
     } catch (error) {
       setError(error);
     }
   };
+
   useEffect(() => {
     fetchData();
   }, []);
 
   const clickHandler = () => fetchData();
+  
   return (
-    <div className="container">
-      <div className="card">
+    <main className="container">
+      <section className="card">
         <h5 className="title">advice #{id}</h5>
         {error && <p className="context">{error}</p>}
         {loading && <p className="context">loading...</p>}
@@ -38,8 +40,8 @@ function App() {
         <button className="button" onClick={clickHandler}>
           <img src={Dice} alt="" />
         </button>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 
