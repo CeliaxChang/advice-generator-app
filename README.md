@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Demo : [Advice generator app](https://your-live-site-url.com)
+- Live Demo : [Advice generator app](https://flourishing-pothos-a487fb.netlify.app)
 
 ### Built with
 
